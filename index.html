@@ -608,4 +608,1173 @@
   /* ═══════════════════════════════════════
      PROCESS SECTION
   ═══════════════════════════════════════ */
-  .process-section { background: var(--gray-100
+  .process-section { background: var(--gray-100); }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 44px; left: 10%; right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue-300), var(--aqua), var(--blue-300));
+    z-index: 0;
+  }
+
+  .step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .step-num {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-500), var(--aqua));
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex; justify-content: center; align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 20px rgba(25,128,200,0.4);
+  }
+  .step h4 { font-size: 18px; font-weight: 800; color: var(--blue-900); margin-bottom: 10px; }
+  .step p { color: var(--gray-600); font-size: 14px; line-height: 1.55; }
+  .step-time {
+    display: inline-block;
+    background: var(--blue-900);
+    color: var(--aqua);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* ═══════════════════════════════════════
+     COLOR GALLERY
+  ═══════════════════════════════════════ */
+  .colors-section { background: #fff; }
+
+  .color-swatches {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-top: 50px;
+  }
+  .color-swatch {
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  .color-swatch:hover { transform: scale(1.05); }
+  .color-swatch img { width: 100%; height: 90px; object-fit: cover; display: block; }
+  .color-swatch-name {
+    background: var(--blue-900);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 8px;
+    text-align: center;
+  }
+
+  .colors-note {
+    margin-top: 24px;
+    text-align: center;
+    color: var(--gray-600);
+    font-size: 14px;
+  }
+  .colors-note a { color: var(--blue-500); font-weight: 600; }
+
+  /* ═══════════════════════════════════════
+     DECK & LANDSCAPE
+  ═══════════════════════════════════════ */
+  .deck-section {
+    background: linear-gradient(160deg, var(--blue-900), var(--blue-800));
+    color: #fff;
+  }
+  .deck-section .section-title { color: #fff; }
+  .deck-section .section-title span { color: var(--gold); }
+  .deck-section .section-sub { color: rgba(255,255,255,0.75); }
+  .deck-section .section-label { color: var(--gold); }
+
+  .deck-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .deck-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 28px;
+    transition: background 0.2s;
+  }
+  .deck-card:hover { background: rgba(255,255,255,0.12); }
+  .deck-card-icon { font-size: 36px; margin-bottom: 16px; }
+  .deck-card h3 { color: #fff; font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+  .deck-card p { color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.6; }
+
+  /* ═══════════════════════════════════════
+     PLANNING CTA BANNER
+  ═══════════════════════════════════════ */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--gold), #c07000);
+    padding: 60px 40px;
+    text-align: center;
+  }
+  .cta-banner-inner { max-width: 800px; margin: 0 auto; }
+  .cta-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--blue-900);
+    margin-bottom: 14px;
+  }
+  .cta-banner p {
+    color: rgba(12,26,46,0.75);
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  .cta-banner .btn-dark {
+    background: var(--blue-900);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 18px 42px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-banner .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+
+  /* ═══════════════════════════════════════
+     FAQ SECTION
+  ═══════════════════════════════════════ */
+  .faq-section { background: var(--gray-100); }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+    align-items: start;
+  }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .faq-item {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .faq-item:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    color: var(--blue-900);
+    font-size: 15px;
+    font-weight: 700;
+    gap: 12px;
+    user-select: none;
+  }
+  .faq-q .arrow {
+    font-size: 18px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    color: var(--blue-500);
+  }
+  .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-item.open .faq-a { max-height: 300px; }
+
+  .faq-a-inner {
+    padding: 0 20px 18px;
+    color: var(--gray-600);
+    font-size: 14px;
+    line-height: 1.65;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 16px;
+  }
+
+  .faq-cta-side {
+    background: linear-gradient(160deg, var(--blue-800), var(--blue-900));
+    border-radius: 16px;
+    padding: 36px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .faq-cta-side h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .faq-cta-side h3 span { color: var(--aqua); }
+  .faq-cta-side p { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.6; }
+  .faq-contact-items { display: flex; flex-direction: column; gap: 12px; }
+  .faq-contact-item {
+    display: flex; align-items: center; gap: 12px;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px; font-weight: 500;
+  }
+  .faq-contact-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,200,255,0.15);
+    display: flex; justify-content: center; align-items: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .faq-contact-item a { color: var(--aqua); font-weight: 700; text-decoration: none; }
+
+  /* ═══════════════════════════════════════
+     CONTACT FORM SECTION
+  ═══════════════════════════════════════ */
+  .contact-section {
+    background: #fff;
+    padding: 90px 40px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    align-items: start;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 24px; }
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--blue-900);
+    font-weight: 700;
+  }
+  .contact-info p {
+    color: var(--gray-600);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .contact-items { display: flex; flex-direction: column; gap: 14px; }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--gray-100);
+    border-radius: 12px;
+  }
+  .ci-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--blue-600), var(--blue-400));
+    display: flex; justify-content: center; align-items: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .ci-text strong { display: block; color: var(--blue-900); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .ci-text a, .ci-text span { color: var(--blue-600); font-size: 16px; font-weight: 600; text-decoration: none; display: block; }
+
+  .contact-form-box {
+    background: var(--gray-100);
+    border-radius: 16px;
+    padding: 36px;
+  }
+  .contact-form-box h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--blue-900);
+    margin-bottom: 6px;
+  }
+  .contact-form-box p {
+    color: var(--gray-600);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .form-group label { font-size: 13px; font-weight: 600; color: var(--blue-900); }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 16px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: var(--blue-900);
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--blue-500); }
+  .form-group textarea { height: 100px; resize: none; }
+
+  .form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--blue-600), var(--blue-800));
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(25,128,200,0.4); }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .form-success.show { display: block; }
+  .form-success-icon { font-size: 54px; margin-bottom: 16px; }
+  .form-success h4 { color: var(--green); font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+  .form-success p { color: var(--gray-600); font-size: 15px; }
+
+  /* ═══════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════ */
+  footer {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 50px 40px 24px;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 14px;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    color: var(--aqua);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+  /* ═══════════════════════════════════════
+     MOBILE HAMBURGER
+  ═══════════════════════════════════════ */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: #fff; border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════ */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    section { padding: 60px 20px; }
+    .hero { padding: 90px 20px 50px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 38px; }
+
+    .problem-grid,
+    .solution-grid,
+    .faq-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+
+    .serve-grid { grid-template-columns: 1fr; }
+    .deck-services { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .process-steps::before { display: none; }
+    .color-swatches { grid-template-columns: repeat(3, 1fr); }
+
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: 32px; }
+    .trust-bar-inner { justify-content: center; }
+
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">🏊</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-main">FixMyOldPool</span>
+      <span class="nav-logo-sub">.com</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#solution">Our Solution</a></li>
+    <li><a href="#who-we-serve">Who We Serve</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#colors">Colors</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get a Free Quote →</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="home">
+
+  <!-- Background photo slideshow: commercial/HOA/hotel pools -->
+  <div class="hero-slideshow">
+    <div class="hero-slide" style="background-image: url('https://ecofinishcoatings.com/wp-content/uploads/2022/11/Blue-Mist-Fort-Walton-Beach-Coastal.jpg'); background-position: center 30%;"></div>
+    <div class="hero-slide" style="background-image: url('https://ecofinishcoatings.com/wp-content/uploads/2022/11/Hilton-Garden-North-Carolina-Kitty-Hawk-2015-03-1-scaled-e1672664391912.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('https://ecofinishcoatings.com/wp-content/uploads/2022/11/Sandy-Beach-Blue-Mist-Municipal-Pool-Ringgold-GA-EverClear-Pools-2.jpg');"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">🏊 Commercial Pool Refinishing</div>
+      <h1>Stop Closing Your Pool for <span>8 Weeks</span></h1>
+      <p class="hero-sub">Our fiberglass liner + Aquabright™ coating process gets your commercial pool back open in just <strong style="color:#fff">2 weeks</strong> — not 6 to 8. No 30-day cure. No truck water. No headaches.</p>
+      <div class="hero-targets">
+        <span class="hero-target">🏘️ HOA Communities</span>
+        <span class="hero-target">🏢 Apartment Complexes</span>
+        <span class="hero-target">🏨 Hotels & Resorts</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get Your Free Quote →</a>
+        <a href="#solution" class="btn-secondary">▶ See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-comparison">
+      <div class="comparison-title">⏱ Pool Downtime Comparison</div>
+      <div class="compare-row">
+        <div class="compare-old">
+          <div class="comp-label">❌ Old Plaster</div>
+          <div class="comp-method">Traditional Replaster</div>
+          <div class="comp-time">6–8</div>
+          <div class="comp-unit">WEEKS CLOSED</div>
+        </div>
+        <div class="compare-vs">VS</div>
+        <div class="compare-new">
+          <div class="comp-label">✓ Our Process</div>
+          <div class="comp-method">Fiberglass + Aquabright™</div>
+          <div class="comp-time">~2</div>
+          <div class="comp-unit">WEEKS CLOSED</div>
+        </div>
+      </div>
+      <div class="compare-wins">
+        <div class="compare-win">
+          <div class="win-icon">✓</div>
+          Fill pool same day — no 30-day cure period
+        </div>
+        <div class="compare-win">
+          <div class="win-icon">✓</div>
+          No truck water costs during curing
+        </div>
+        <div class="compare-win">
+          <div class="win-icon">✓</div>
+          Lasts longer than traditional plaster
+        </div>
+        <div class="compare-win">
+          <div class="win-icon">✓</div>
+          Beautiful finish — dozens of colors available
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST BAR ═══════════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-icon">⚡</span> Fast 2-Week Turnaround</div>
+    <div class="trust-item"><span class="trust-icon">🏗️</span> Licensed & Insured Contractors</div>
+    <div class="trust-item"><span class="trust-icon">💎</span> Aquabright™ by ecoFINISH®</div>
+    <div class="trust-item"><span class="trust-icon">🌊</span> Commercial & Residential</div>
+    <div class="trust-item"><span class="trust-icon">🎨</span> 20+ Color Options</div>
+    <div class="trust-item"><span class="trust-icon">💰</span> Financing Available</div>
+  </div>
+</div>
+
+<!-- ═══════════ THE PROBLEM ═══════════ -->
+<section class="problem-section" id="problem">
+  <div class="section-inner">
+    <span class="section-label">The Problem</span>
+    <h2 class="section-title">Why Plaster Pools Are a <span>Costly Headache</span></h2>
+    <p class="section-sub">Traditional plaster is the industry default — but it comes with serious downsides for commercial pool operators that affect residents, guests, and your bottom line.</p>
+
+    <div class="problem-grid">
+      <div class="problem-image">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/11/Sahara-Sand-and-Sandy-Beach-Concrete-of-Fiberglass-France-Solution-Resine-1-1-scaled.jpeg" alt="Pool steps and deck">
+        <div class="problem-image-caption">Plaster pools typically need resurfacing every 10–15 years — an expensive, disruptive process.</div>
+      </div>
+      <div class="problem-points">
+        <div class="problem-point">
+          <div class="problem-point-icon">🚫</div>
+          <div>
+            <strong>6–8 Weeks of Downtime</strong>
+            <p>Traditional replaster requires a 30-day cure period before the pool can even be filled — keeping your pool closed for up to 2 months. For HOAs, apartments, and hotels, that's a major disruption.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-point-icon">💸</div>
+          <div>
+            <strong>Expensive Cure Process</strong>
+            <p>Plaster must be kept wet during curing — requiring costly truckloads of water and intensive monitoring. Then a complicated "Hot Start" chemical treatment follows before swimmers can use the pool.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-point-icon">🔨</div>
+          <div>
+            <strong>Cracks, Stains & Short Lifespan</strong>
+            <p>Plaster stains easily, shrinks and cracks over time, and often needs complete replacement rather than patching. You're back to square one every 10–15 years.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-point-icon">🧪</div>
+          <div>
+            <strong>Constant Chemistry Battles</strong>
+            <p>Plaster is porous and pH-sensitive, requiring constant chemical balancing. Improper chemistry etches and damages the surface — an ongoing maintenance burden and expense.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ THE SOLUTION ═══════════ -->
+<section class="solution-section" id="solution">
+  <div class="section-inner">
+    <span class="section-label">Our Solution</span>
+    <h2 class="section-title">Fiberglass Liner + <span>Aquabright™</span> Coating</h2>
+    <p class="section-sub">We apply a premium fiberglass liner followed by ecoFINISH's Aquabright™ thermoplastic coating — a modern, proven solution that dramatically reduces downtime and outperforms plaster in every way.</p>
+
+    <div class="solution-grid">
+      <div class="solution-features">
+        <div class="solution-feature">
+          <div class="sf-icon">⏱️</div>
+          <div class="sf-text">
+            <strong>Pool Open in ~2 Weeks</strong>
+            <p>Aquabright™ cures in hours — not days or weeks. Fill your pool the same day or the very next day after application. No truck water. No waiting.</p>
+          </div>
+        </div>
+        <div class="solution-feature">
+          <div class="sf-icon">🔬</div>
+          <div class="sf-text">
+            <strong>Non-Porous Thermoplastic Finish</strong>
+            <p>The smooth, pH-neutral surface won't stain, etch, or require the complex chemistry that plaster demands. Maintaining water balance is dramatically simpler.</p>
+          </div>
+        </div>
+        <div class="solution-feature">
+          <div class="sf-icon">🎨</div>
+          <div class="sf-text">
+            <strong>Uniform, Long-Lasting Color</strong>
+            <p>Unlike plaster, Aquabright™ won't mottle, fade, or develop blotchy patches as it ages. The color stays consistent across the entire pool surface for years.</p>
+          </div>
+        </div>
+        <div class="solution-feature">
+          <div class="sf-icon">🛡️</div>
+          <div class="sf-text">
+            <strong>Manufacturer Warranty Backed</strong>
+            <p>Aquabright™ by ecoFINISH® is backed by a warranty that gives commercial property owners confidence in the long-term performance of their investment.</p>
+          </div>
+        </div>
+        <div class="solution-feature">
+          <div class="sf-icon">🧊</div>
+          <div class="sf-text">
+            <strong>Slip-Resistant for High Traffic</strong>
+            <p>Available with slip-resistant application on steps, benches, and zero-entry areas — critical for commercial pool liability and guest safety.</p>
+          </div>
+        </div>
+      </div>
+      <div class="solution-image">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2025/07/French_Grey_4.jpg" alt="Luxury pool with Aquabright French Grey finish">
+        <div class="aquabright-logo">Powered by <span>aquaBRIGHT™</span></div>
+        <div class="solution-badge">✓ Cures in Hours — Pool Open in Days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WHO WE SERVE ═══════════ -->
+<section class="serve-section" id="who-we-serve">
+  <div class="section-inner">
+    <span class="section-label">Who We Serve</span>
+    <h2 class="section-title">Built for <span>Commercial</span> Pool Operators</h2>
+    <p class="section-sub">We understand that a closed pool means unhappy residents, lost bookings, and revenue you can't get back. Our process was designed around minimizing your downtime.</p>
+
+    <div class="serve-grid">
+      <div class="serve-card">
+        <div class="serve-card-img" style="background-image: url('https://ecofinishcoatings.com/wp-content/uploads/2025/07/French_Grey_4.jpg');">
+          <span class="serve-card-icon">🏘️</span>
+        </div>
+        <div class="serve-card-body">
+          <h3>HOA Communities</h3>
+          <p>Community pools are a top amenity — and a major source of homeowner satisfaction. An extended closure triggers complaints, board pressure, and declining property values.</p>
+          <div class="serve-pain">😤 "The pool has been closed for 2 months — residents are furious."</div>
+          <div class="serve-win">✅ Back open in 2 weeks. Residents happy. Board pleased.</div>
+        </div>
+      </div>
+      <div class="serve-card">
+        <div class="serve-card-img" style="background-image: url('https://ecofinishcoatings.com/wp-content/uploads/2022/11/Sahara-Sand-and-Sandy-Beach-Concrete-of-Fiberglass-France-Solution-Resine-1-1-scaled.jpeg');">
+          <span class="serve-card-icon">🏢</span>
+        </div>
+        <div class="serve-card-body">
+          <h3>Apartment Complexes</h3>
+          <p>A pool is a premium amenity that justifies higher rents and fills vacancies. An 8-week closure can lead to lease non-renewals and prospective tenants choosing a competitor property.</p>
+          <div class="serve-pain">😟 "We're losing tenants because the pool has been down all summer."</div>
+          <div class="serve-win">✅ Minimal downtime protects your occupancy rates and rent premiums.</div>
+        </div>
+      </div>
+      <div class="serve-card">
+        <div class="serve-card-img" style="background-image: url('https://ecofinishcoatings.com/wp-content/uploads/2025/07/French_Grey_4.jpg'); background-position: bottom;">
+          <span class="serve-card-icon">🏨</span>
+        </div>
+        <div class="serve-card-body">
+          <h3>Hotels & Resorts</h3>
+          <p>For hotels, a closed pool means cancelled bookings, negative reviews, and direct revenue loss — especially during peak season. Every week the pool is closed costs you money.</p>
+          <div class="serve-pain">💸 "We turned away $40K in bookings while the pool was down."</div>
+          <div class="serve-win">✅ Plan renovations in fall/winter. Open fresh for peak season.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOW IT WORKS ═══════════ -->
+<section class="process-section" id="process">
+  <div class="section-inner">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Our <span>4-Step</span> Pool Transformation Process</h2>
+    <p class="section-sub">From your first call to swimmers back in the water — we make the process simple, fast, and minimally disruptive to your operations.</p>
+
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Free Consultation & Quote</h4>
+        <p>We assess your pool, discuss your goals, and provide a detailed no-obligation quote with timeline, color options, and total cost.</p>
+        <div class="step-time">📅 1–2 Days</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Pool Draining & Surface Prep</h4>
+        <p>We drain the pool and prepare the existing surface — addressing any cracks, chips, or structural concerns before application.</p>
+        <div class="step-time">🔧 2–3 Days</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Fiberglass + Aquabright™ Application</h4>
+        <p>Our certified technicians apply the fiberglass liner and Aquabright™ thermoplastic coating. The finish cures in hours — not weeks.</p>
+        <div class="step-time">✨ 3–5 Days</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Fill & Balance — Open for Swimmers</h4>
+        <p>Fill the pool immediately after application. Quick water chemistry balance and your pool is ready. No complicated Hot Start process needed.</p>
+        <div class="step-time">🏊 Same or Next Day Fill</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ COLOR GALLERY ═══════════ -->
+<section class="colors-section" id="colors">
+  <div class="section-inner">
+    <span class="section-label">Color Options</span>
+    <h2 class="section-title">20+ Colors to <span>Transform</span> Your Pool</h2>
+    <p class="section-sub">Aquabright™ offers a wide range of beautiful, long-lasting colors. Unlike plaster, the color stays uniform and won't fade, mottle, or blotch over time.</p>
+
+    <div class="color-swatches">
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Mediterranean-Blue-aquaBRIGHT-Swatch-2023.png" alt="Mediterranean Blue">
+        <div class="color-swatch-name">Mediterranean Blue</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Blue-Lagoon-aquaBRIGHT-Swatch-2023.png" alt="Blue Lagoon">
+        <div class="color-swatch-name">Blue Lagoon</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Midnight-Blue-aquaBRIGHT-Swatch-2023.png" alt="Midnight Blue">
+        <div class="color-swatch-name">Midnight Blue</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/French-Grey-aquaBRIGHT-Swatch-2023.png" alt="French Grey">
+        <div class="color-swatch-name">French Grey</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Sandy-Beach-polyFIBRO-Swatch-2023.png" alt="Sandy Beach">
+        <div class="color-swatch-name">Sandy Beach</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Kona-Coast-aquaBRIGHT-Swatch-2023.png" alt="Kona Coast">
+        <div class="color-swatch-name">Kona Coast</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Pacific-Blue-polyFIBRO-Swatch-2023.png" alt="Pacific Blue">
+        <div class="color-swatch-name">Pacific Blue</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Blue-Granite-aquaBRIGHT-Swatch-2023.png" alt="Blue Granite">
+        <div class="color-swatch-name">Blue Granite</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Grey-Reef-aquaBRIGHT-Swatch-2023.png" alt="Grey Reef">
+        <div class="color-swatch-name">Grey Reef</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Sahara-Sand-aquaBRIGHT-Swatch-2023.png" alt="Sahara Sand">
+        <div class="color-swatch-name">Sahara Sand</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/California-White-Commercial-Swatch-2023.png" alt="California White">
+        <div class="color-swatch-name">California White</div>
+      </div>
+      <div class="color-swatch">
+        <img src="https://ecofinishcoatings.com/wp-content/uploads/2022/12/Blue-Mist-aquaBRIGHT-Swatch-2023.png" alt="Blue Mist">
+        <div class="color-swatch-name">Blue Mist</div>
+      </div>
+    </div>
+    <p class="colors-note">Showing 12 of 20+ available colors. View the full palette at <a href="https://ecofinishcoatings.com/water-color-selector" target="_blank">ecofinishcoatings.com</a>. Ask us for physical samples.</p>
+  </div>
+</section>
+
+<!-- ═══════════ DECK & LANDSCAPE ═══════════ -->
+<section class="deck-section" id="services">
+  <div class="section-inner">
+    <span class="section-label">Additional Services</span>
+    <h2 class="section-title">Complete Pool Area <span>Transformation</span></h2>
+    <p class="section-sub">While we're there, we can transform the entire pool area — not just the interior. We offer pool deck refinishing and landscape upgrades to give your property a complete resort-quality makeover.</p>
+
+    <div class="deck-services">
+      <div class="deck-card">
+        <div class="deck-card-icon">🏗️</div>
+        <h3>Pool Deck Remodeling</h3>
+        <p>Old, cracked, or faded pool decks are a safety hazard and an eyesore. We refinish, resurface, and transform pool decks to complement your new pool finish — creating a cohesive, modern look.</p>
+      </div>
+      <div class="deck-card">
+        <div class="deck-card-icon">🌿</div>
+        <h3>Landscape Upgrades</h3>
+        <p>Enhance the entire pool area with professional landscaping — from low-maintenance drought-tolerant plantings to artificial turf, lighting, and decorative elements that elevate curb appeal.</p>
+      </div>
+      <div class="deck-card">
+        <div class="deck-card-icon">🔧</div>
+        <h3>Pool Equipment & Repairs</h3>
+        <p>We handle structural crack repairs, coping replacement, tile work, and coordination with pool equipment specialists to ensure your entire pool system is performing at its best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PLANNING CTA ═══════════ -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>☀️ Plan Now. Install This Fall or Winter.</h2>
+    <p>Summer is the perfect time to plan your pool renovation — so you're ready to schedule for fall and winter when your pool sees less traffic. Don't wait until spring and miss another season.</p>
+    <a href="#contact" class="btn-dark">📋 Schedule a Free Consultation →</a>
+  </div>
+</div>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="faq-section" id="faq">
+  <div class="section-inner">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Common <span>Questions</span></h2>
+    <p class="section-sub">Everything property managers, HOA boards, and hotel operators want to know before getting started.</p>
+
+    <div class="faq-grid">
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How is Aquabright™ different from replastering?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Aquabright™ is a thermoplastic polymer coating applied over the existing pool surface. Unlike plaster, it cures in hours (not 30 days), is pH neutral and non-porous, won't stain or crack, and requires far simpler water chemistry maintenance. The total project downtime is approximately 2 weeks vs. 6–8 weeks for traditional replaster.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How long will the Aquabright™ finish last?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Aquabright™ is significantly more durable than traditional plaster. The finish is backed by an ecoFINISH® manufacturer warranty. With proper water chemistry maintenance, it is designed to outlast plaster by many years.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Can you apply Aquabright™ over our existing plaster?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Yes — in most cases Aquabright™ can be applied directly over existing concrete or plaster surfaces after proper preparation. We will assess your specific pool during the consultation and let you know if any repairs are needed first.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What is the actual downtime during the project?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Total downtime is typically 10–14 days, covering pool draining, surface preparation, crack repairs if needed, fiberglass and Aquabright™ application, and refilling. Once the application is complete, the pool can be filled immediately — there is no 30-day cure period.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you handle permits and compliance for commercial pools?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Yes. We work with licensed, insured contractors familiar with commercial pool codes and can advise on permit requirements. We coordinate the full scope of work so you don't have to manage multiple contractors.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            When is the best time to schedule the renovation?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Summer is the ideal time to plan and secure your spot on our schedule. We install primarily in fall and winter when pools see reduced usage — minimizing the impact on your residents, tenants, and guests. Contact us now to plan ahead and avoid spring rush.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you also refinish pool decks and do landscaping?
+            <span class="arrow">▾</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Yes! We offer complete pool area transformations — including pool deck resurfacing, coping, tile work, and landscape upgrades. Many of our clients take the opportunity to renovate the entire pool area while the pool is already closed.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-cta-side">
+        <h3>Still have questions? <span>We're here to help.</span></h3>
+        <p>Our team can walk you through the entire process, provide a custom timeline for your specific pool, and answer any questions your HOA board, management company, or ownership team may have.</p>
+        <div class="faq-contact-items">
+          <div class="faq-contact-item">
+            <div class="faq-contact-icon">📞</div>
+            <div><strong>Call or Text</strong><br><a href="tel:+18003815900">1-800-381-5900</a></div>
+          </div>
+          <div class="faq-contact-item">
+            <div class="faq-contact-icon">✉️</div>
+            <div><strong>Email Us</strong><br><a href="mailto:info@fixmyoldpool.com">info@fixmyoldpool.com</a></div>
+          </div>
+          <div class="faq-contact-item">
+            <div class="faq-contact-icon">📋</div>
+            <div><strong>Free Quote</strong><br><a href="#contact">Submit our quick form below</a></div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary" style="text-align:center; justify-content:center;">Get My Free Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT FORM ═══════════ -->
+<section class="contact-section" id="contact">
+  <div class="section-inner" style="text-align:center">
+    <span class="section-label">Get Started</span>
+    <h2 class="section-title">Get Your Free <span>Pool Renovation Quote</span></h2>
+    <p class="section-sub" style="margin:0 auto">Tell us about your pool and we'll get back to you within 24 hours with a custom quote, color options, and project timeline.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Why Contact Us Now?</h3>
+      <p>Summer is planning season. Fall and winter installation slots fill up fast. Reach out today to secure your preferred timeline and get a jump on your competition.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div class="ci-text">
+            <strong>Phone / Text</strong>
+            <a href="tel:+18003815900">1-800-381-5900</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div class="ci-text">
+            <strong>Email</strong>
+            <a href="mailto:info@fixmyoldpool.com">info@fixmyoldpool.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">🗓️</div>
+          <div class="ci-text">
+            <strong>Response Time</strong>
+            <span>Within 24 hours</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div class="ci-text">
+            <strong>Service Area</strong>
+            <span>Southern California</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-box">
+      <h3>Request a Free Quote</h3>
+      <p>No obligation. We'll reach out within 24 hours.</p>
+
+      <div id="mainFormWrap">
+        <form onsubmit="submitMainForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label>Title / Role</label>
+              <input type="text" placeholder="HOA Board Member, Property Manager...">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="(555) 000-0000" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="you@property.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Property Name & Address</label>
+            <input type="text" placeholder="Sunset HOA, 123 Main St, Irvine CA">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Property Type *</label>
+              <select required>
+                <option value="">Select one...</option>
+                <option>HOA / Community Pool</option>
+                <option>Apartment Complex</option>
+                <option>Hotel / Resort</option>
+                <option>Spa / Fitness Club</option>
+                <option>Other Commercial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Pool Approximate Size</label>
+              <select>
+                <option value="">Approx. size...</option>
+                <option>Small (under 20x40 ft)</option>
+                <option>Medium (20x40 – 25x50 ft)</option>
+                <option>Large (over 25x50 ft)</option>
+                <option>Multiple Pools</option>
+                <option>Not Sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Preferred Installation Timing</label>
+            <select>
+              <option value="">When do you want to install?</option>
+              <option>Fall 2025 (Sept–Nov)</option>
+              <option>Winter 2025–26 (Dec–Feb)</option>
+              <option>Spring 2026</option>
+              <option>ASAP / Flexible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us about your pool</label>
+            <textarea placeholder="Current pool condition, any known cracks or issues, current surface (plaster, fiberglass), what services you're interested in..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">🚀 Send My Free Quote Request</button>
+        </form>
+      </div>
+
+      <div class="form-success" id="mainFormSuccess">
+        <div class="form-success-icon">✅</div>
+        <h4>Quote Request Received!</h4>
+        <p>Thank you! Our team will review your project details and contact you within 24 hours with a custom quote and timeline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+          <div class="nav-logo-icon">🏊</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">FixMyOldPool</span>
+            <span class="nav-logo-sub">.com</span>
+          </div>
+        </a>
+        <p>Expert commercial pool refinishing using fiberglass liners and Aquabright™ by ecoFINISH® — getting your pool back open in 2 weeks, not 8.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#solution">Pool Refinishing</a></li>
+          <li><a href="#services">Deck Remodeling</a></li>
+          <li><a href="#services">Landscaping</a></li>
+          <li><a href="#process">Our Process</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>We Serve</h4>
+        <ul>
+          <li><a href="#who-we-serve">HOA Communities</a></li>
+          <li><a href="#who-we-serve">Apartment Complexes</a></li>
+          <li><a href="#who-we-serve">Hotels & Resorts</a></li>
+          <li><a href="#who-we-serve">Commercial Pools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+18003815900">1-800-381-5900</a></li>
+          <li><a href="mailto:info@fixmyoldpool.com">info@fixmyoldpool.com</a></li>
+          <li><a href="#contact">Free Quote Form</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FixMyOldPool.com — All Rights Reserved</span>
+      <span>Powered by <a href="https://ecofinishcoatings.com/aquabright/" target="_blank">Aquabright™ by ecoFINISH®</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Form submit
+  function submitMainForm(e) {
+    e.preventDefault();
+    document.getElementById('mainFormWrap').style.display = 'none';
+    document.getElementById('mainFormSuccess').classList.add('show');
+  }
+
+  // Mobile menu
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'fixed';
+      links.style.top = '70px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'rgba(12,26,46,0.98)';
+      links.style.padding = '20px 40px 30px';
+      links.style.gap = '18px';
+      links.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+      links.style.zIndex = '999';
+    }
+  }
+
+  // Nav scroll shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 30 ? '0 4px 30px rgba(0,0,0,0.4)' : 'none';
+  });
+</script>
+</body>
+</html>
